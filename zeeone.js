@@ -103,7 +103,7 @@ message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us",
 \`\`\`User :\`\`\` @${num.split('@')[0]}
 \`\`\`Group :\`\`\` ${mdata.subject}
 
-_Selamat jabatan kamu naik_`
+_Selamat jabatan kamu naik, udah ijin admin belom?_`
 			alpha.sendMessage(mdata.id, buff, MessageType.image, {thumbnail: buff, caption : teks, contextInfo: {mentionedJid: [num],"forwardingScore":999,"isForwarded":true},sendEphemeral: true , quoted : falfa})
 		} else if (anu.action == 'demote') {
 			num = anu.participants[0]
@@ -120,7 +120,7 @@ _Selamat jabatan kamu naik_`
 \`\`\`User :\`\`\` @${num.split('@')[0]}
 \`\`\`Group :\`\`\` ${mdata.subject}
 
-_Kasian malah kena demote_`
+_Kasian malah kena demote, sabar ya kak:)_`
 			alpha.sendMessage(mdata.id, buff, MessageType.image, {thumbnail: buff, caption:teks,contextInfo: {mentionedJid: [num],"forwardingScore":999,"isForwarded":true},sendEphemeral: true  , quoted: falfa})
 		}
      } catch (e) {
@@ -199,7 +199,7 @@ if (antical === false) return
 let call;
 calling = JSON.parse(JSON.stringify(json))
 call = calling[1].from
-alpha.sendMessage(call, `*Sorry ${alpha.user.name} can't receive calls.*\n*Call = Block!*`, MessageType.text)
+alpha.sendMessage(call, `*Sorry ${alpha.user.name} tidak bisa di telfon.*\n*Call = Block!, Bot Whatsapp*`, MessageType.text)
 .then(() => alpha.blockUser(call, "add"))
 })
 isBattre = 'Not Detect' 
